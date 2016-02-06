@@ -11,6 +11,10 @@ video {
   	position: fixed;
 }
 
+audio { 
+   display:none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -227,9 +231,13 @@ a.red:hover {
 }
 
 #firstName {
-
+  width: 40%;
 }
 
 #lastName {
+  width: 40%;
+}
+
+#buttonDIv {
 
 }
