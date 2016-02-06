@@ -9,6 +9,8 @@ sudo touch "$LOG"
 sudo chmod 666 "$LOG"
 
 FILE="$1"
+NUM_SAMPLES=20 # Number of images to sample from the video
+VID_LENGTH=$(ffprobe -i $FILE -show_format | grep duration)
 sudo mkdir "/tmp/atlas"
 
 # Splits the video into individual jpg frames
