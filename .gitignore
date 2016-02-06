@@ -63,3 +63,6 @@ target/
 
 #Personal Videos
 my_videos/
+
+#IDEA
+.idea/
