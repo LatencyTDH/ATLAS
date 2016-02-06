@@ -9,19 +9,23 @@ sudo touch "$LOG"
 sudo chmod 666 "$LOG"
 
 FILE="$1"
-NUM_SAMPLES=20 # Number of images to sample from the video
+NUM_SAMPLES=9 # Number of images to sample from the video
 VID_LENGTH=$(ffprobe -i $FILE -show_format | grep duration)
+VID_LENGTH=${VID_LENGTH/duration=/""}
+FPS=$(bc -l <<< $NUM_SAMPLES/$VID_LENGTH)
 sudo mkdir "/tmp/atlas"
 
+OUT=""
 # Splits the video into individual jpg frames
 split_video() {
 	echo "$1"
 	OUT_PATH="/tmp/atlas/""$(basename $1)"
 	OUT_PATH="${OUT_PATH%.mp4}" 
+	OUT=$OUT_PATH
 	sudo mkdir "$OUT_PATH"
 	sudo mkdir "${OUT_PATH}/frames"
 	# Creates one image per second of video
-	sudo ffmpeg -i $FILE -f image2 -vf fps=1 "${OUT_PATH}/frames/out-%04d.jpg"
+	sudo ffmpeg -i $FILE -f image2 -vf fps=$FPS "${OUT_PATH}/frames/out-%04d.jpg"
 }
 
 # Error logging
@@ -42,4 +46,6 @@ else
 	err "Inappropriate video file. Unable to split."
 fi
 
-
+echo "Classifying images in ${OUT}/frames" >> $LOG
+python classify_image.py --directory "${OUT}/frames" > "classes.txt" 
+sudo mv classes.txt "${OUT_PATH}/classes.txt"
