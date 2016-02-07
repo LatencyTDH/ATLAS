@@ -9,3 +9,6 @@ Project created at HopHacks 2016.
 1.  tensorflow
 2.  nltktoolkit
 3.  numpy
+4.  
+### Other Software Libraries
+1.  ffmpeg
