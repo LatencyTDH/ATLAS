@@ -1,0 +1,71 @@
+/tmp/atlas/vid1/frames/out-0001.jpg
+missile|0.27484
+projectile, missile|0.27127
+catamaran|0.08839
+trimaran|0.07705
+flagpole, flagstaff|0.01412
+
+/tmp/atlas/vid1/frames/out-0002.jpg
+snorkel|0.57447
+ski mask|0.01908
+sunglass|0.01430
+mask|0.01410
+sunglasses, dark glasses, shades|0.01383
+
+/tmp/atlas/vid1/frames/out-0003.jpg
+scuba diver|0.49401
+electric ray, crampfish, numbfish, torpedo|0.05225
+snorkel|0.04781
+dugong, Dugong dugon|0.03569
+stingray|0.02965
+
+/tmp/atlas/vid1/frames/out-0004.jpg
+fireboat|0.52339
+fountain|0.17422
+speedboat|0.02217
+trimaran|0.01568
+submarine, pigboat, sub, U-boat|0.01563
+
+/tmp/atlas/vid1/frames/out-0005.jpg
+hammerhead, hammerhead shark|0.36523
+dugong, Dugong dugon|0.08850
+great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias|0.07970
+stingray|0.03736
+sturgeon|0.03280
+
+/tmp/atlas/vid1/frames/out-0006.jpg
+geyser|0.66854
+fountain|0.09922
+grey whale, gray whale, devilfish, Eschrichtius gibbosus, Eschrichtius robustus|0.03887
+fireboat|0.01472
+killer whale, killer, orca, grampus, sea wolf, Orcinus orca|0.00799
+
+/tmp/atlas/vid1/frames/out-0007.jpg
+trimaran|0.19230
+seashore, coast, seacoast, sea-coast|0.13960
+catamaran|0.08436
+ski|0.04520
+speedboat|0.03025
+
+/tmp/atlas/vid1/frames/out-0008.jpg
+seashore, coast, seacoast, sea-coast|0.21301
+trimaran|0.18336
+speedboat|0.09925
+grey whale, gray whale, devilfish, Eschrichtius gibbosus, Eschrichtius robustus|0.04804
+killer whale, killer, orca, grampus, sea wolf, Orcinus orca|0.04354
+
+/tmp/atlas/vid1/frames/out-0009.jpg
+seashore, coast, seacoast, sea-coast|0.20739
+amphibian, amphibious vehicle|0.20348
+speedboat|0.05918
+sandbar, sand bar|0.03789
+catamaran|0.03388
+
+/tmp/atlas/vid1/frames/out-0010.jpg
+trimaran|0.11801
+fireboat|0.10604
+fountain|0.10079
+catamaran|0.05738
+yawl|0.05595
+
+

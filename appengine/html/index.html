@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ATLAS</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+		<!-- background video -->
+		<video autoplay loop>
+			<source src="../video/abstract.mp4" type="video/mp4"/>
+		</video>
+		<audio controls autoplay loop>
+			<!-- <source src="../Audio/TheBuzzTrim.mp3" type="audio/mpeg"/> -->
+		</audio>
+		<div id="buttonDiv">
+			<ul>
+			  	<li>
+					<a href="#" class="round red">SYNC<span class="round"></span></a>
+				</li>
+			</ul> 
+		</div>
+		<div id="upperLeftDiv">
+			<!-- header text for sign in -->
+			<h3 class="signInHeader"> Sign In!</h3>
+			<!-- above middle line, we have sign in -->
+			<form id="signIn">
+				<input class="textField signInTF" id="username" type="text" placeholder="username">
+				<input class="textField signInTF" id="password" type="password" placeholder="password">
+			</form>
+		</div>
+		<hr id="line">
+		<div id="bottomLeftDiv">
+			<!-- header text for sign up -->
+			<h3 class="signInHeader"> Sign Up!</h3>
+			<!-- below middle line, we have sign up -->
+			<form id="signUp">
+				<input class="textField signUpTF" id="firstName" type="text" placeholder="First name">
+				<input class="textField signUpTF" id="lastName" type="text" placeholder="Last name">
+				<br>
+				<input class="textField signUpTF" id="email" type="text" placeholder="mail@email.com">
+				<br>
+				<input class="textField signUpTF" type="password" placeholder="original password">
+				<br>
+				<input class="textField signUpTF" type="password" placeholder="confirm password">
+			</form>
+		</div>
+	</body>
+</html>
