@@ -17,6 +17,6 @@ crop() {
 	sudo mv output.mp4 ${OUT_FILE}
 }
 
-# Tries to get the first matching with quality 720p
-sudo youtube-dl -F ${URL} | grep 'mp4' | grep 1280x720 | cut -f 1 -d ' ' | head -n 1 | xargs youtube-dl ${URL} -o "${OUT_FILE}" -f 
+# Retrieves the video from the Youtube URL
+sudo youtube-dl -F ${URL} | grep 'mp4' | cut -f 1 -d ' ' | head -n 1 | xargs youtube-dl ${URL} -o "${OUT_FILE}" -f 
 crop "${START}" "${END}"
