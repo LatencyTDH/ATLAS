@@ -1,0 +1,293 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 13px;
+  text-align: center;
+}
+
+
+
+ul {
+  margin: 0 auto;
+  padding-top: 20%;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+@-moz-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@-o-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.round {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .7);
+  letter-spacing: -.065em;
+  font-family: "Hammersmith One", sans-serif;
+  -webkit-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, .2);
+  border-radius: 300px;
+  z-index: 1;
+  border-width: 4px;
+  border-style: solid;
+}
+
+.round:hover {
+  width: 130%;
+  height: 130%;
+  left: -15%;
+  top: -15%;
+  font-size: 33px;
+  padding-top: 38px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+  -o-box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+  z-index: 2;
+  border-size: 10px;
+  -webkit-transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+
+a.red {
+  background-color: rgba(239, 57, 50, 1);
+  color: rgba(133, 32, 28, 1);
+  border-color: rgba(133, 32, 28, .2);
+}
+
+a.red:hover {
+  color: rgba(239, 57, 50, 1);
+}
+
+.round span.round {
+  display: block;
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  font-size: 1px;
+  border: none;
+  padding: 40% 20% 0 20%;
+  color: #fff;
+}
+
+.round span:hover {
+  opacity: .85;
+  font-size: 16px;
+  font-family: Times;
+  -webkit-text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+  -moz-text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+  -o-text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+  padding-top: 50%;
+}
+
+.red span {
+  background: rgba(133, 32, 28, .7);
+}
+
+audio {
+  display: none;
+}
+
+img {
+  width:100%;
+  height:100%;
+  margin-bottom: -25%;
+  margin-top: -25%;
+}
+
+video {
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  max-width: 100%;
+  max-height: 100%;
+  background-size:cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  o-background-size: cover;
+  z-index: -100;
+}
+
+footer {
+  background-color:black;
+  color:white;
+  clear:both;
+  text-align:center;
+  font-size: 16px;
+  padding:0px;
+}
+
+.logoWrapper {
+  left:50%;
+  position: absolute; 
+  top: 10%;
+  transform: translate(-50%, -50%);
+}
+
+#logo {
+  width:70%;
+  height:70%;
+}
+
+.textField {
+  margin: 5px 5px 5px 5px;
+  border-radius: 50px;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  outline: none;
+}
+
+.signInTF {
+  font-family: helvetica, Times;
+  font-weight: bold;
+  color: #6699f6;
+
+}
+
+.signUpTF {
+  font-family: helvetica, Times;
+  font-weight: bold;
+  color: #10DC33;
+}
+
+.inner {
+  position: absolute;
+  text-align: center;
+  width:80%;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.FormInputDiv { 
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;   
+  font-weight: 100; 
+  background: rgba(220,30,197,0.0); 
+  color: white; 
+  /*padding: 2rem;*/ 
+  width: 100%;
+  /*margin: 2rem;*/ 
+  overflow: hidden;
+  /*float: ;*/ 
+  font-size: 1.2rem; 
+}
+
+#signInDiv {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  float: left;
+  padding: 4% 10% 4% 6%;
+}
+
+#signUpDiv {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  float:right;
+  padding: 4% 6% 4% 10%;
+}
+
+#upperLeftDiv {
+  position: absolute;
+  padding: 10% 10% 10% 10%;
+  top: 0;
+  left: 0;
+}
+
+#bottomLeftDiv {
+  position: absolute;
+  padding: 10% 10% 10% 10%;
+  bottom: 0;
+  left: 0;
+}
+
+#username {
+
+}
+
+#password {
+
+}
+
+#firstName {
+
+}
+
+#lastName {
+
+}
