@@ -13,6 +13,8 @@ NUM_SAMPLES=9 # Number of images to sample from the video
 VID_LENGTH=$(ffprobe -i $FILE -show_format | grep duration)
 VID_LENGTH=${VID_LENGTH/duration=/""}
 FPS=$(bc -l <<< $NUM_SAMPLES/$VID_LENGTH)
+THRESHOLD=0.45 # Sensitivity of output classification labels
+
 sudo mkdir "/tmp/atlas"
 
 OUT=""
@@ -47,5 +49,8 @@ else
 fi
 
 echo "Classifying images in ${OUT}/frames" >> $LOG
-python classify_image.py --directory "${OUT}/frames" > "classes.txt" 
+python classify_image.py --directory "${OUT}/frames" > "classes.txt"
+python aggregation.py "classes.txt" "${THRESHOLD}" > "tags.txt"
+
+sudo mv "tags.txt" "${OUT_PATH}/tags.txt"
 sudo mv classes.txt "${OUT_PATH}/classes.txt"
