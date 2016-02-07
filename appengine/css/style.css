@@ -185,6 +185,18 @@ footer {
   padding:0px;
 }
 
+.logoWrapper {
+  left:50%;
+  position: absolute; 
+  top: 10%;
+  transform: translate(-50%, -50%);
+}
+
+#logo {
+  width:70%;
+  height:70%;
+}
+
 .textField {
   margin: 5px 5px 5px 5px;
   border-radius: 50px;
