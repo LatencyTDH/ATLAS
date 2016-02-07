@@ -8,6 +8,13 @@ LOG=/var/log/compute/startup_script_log.txt
 sudo touch "$LOG"
 sudo chmod 666 "$LOG"
 
+get_abspath() {
+	ORIG=$(pwd)
+	cd $(dirname "$1")
+	echo $(pwd)/$(basename "$1")
+	cd "${ORIG}"
+}
+
 FILE="$1"
 NUM_SAMPLES=9 # Number of images to sample from the video
 VID_LENGTH=$(ffprobe -i $FILE -show_format | grep duration)
@@ -49,8 +56,8 @@ else
 fi
 
 echo "Classifying images in ${OUT}/frames" >> $LOG
-python classify_image.py --directory "${OUT}/frames" > "classes.txt"
-python aggregation.py "classes.txt" "${THRESHOLD}" > "tags.txt"
 
-sudo mv "tags.txt" "${OUT_PATH}/tags.txt"
-sudo mv classes.txt "${OUT_PATH}/classes.txt"
+VID_NAME=$(basename "${FILE%.mp4}")
+get_abspath "${FILE}" > "${OUT}/${VID_NAME}.txt"
+python classify_image.py --directory "${OUT}/frames" >> "${OUT}/${VID_NAME}.txt"
+python aggregation.py "${OUT}/${VID_NAME}.txt" "${THRESHOLD}" > "${OUT}/tags.json"

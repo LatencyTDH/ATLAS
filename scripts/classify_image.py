@@ -210,6 +210,7 @@ def main(_):
              os.path.join(FLAGS.model_dir, 'cropped_panda.jpg'))]
   elif FLAGS.directory:
     images = [os.path.join(FLAGS.directory, img) for img in os.listdir(FLAGS.directory) if '.jpg' in img]
+
   for image in images:
     run_inference_on_image(image)
     print("")

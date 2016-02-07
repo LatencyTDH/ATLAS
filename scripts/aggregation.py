@@ -5,6 +5,7 @@ import numpy as np
 import logging
 import nltk
 import os
+import json
 import sys
 from pprint import pprint
 from nltk.corpus import wordnet
@@ -57,7 +58,16 @@ def retrieve_relevant_tags(candidates):
 def main(args):
 	candidates = fetch_candidate_tags(args[1], float(args[2]))
 	relevant_tags = retrieve_relevant_tags(candidates)
-	print ",".join(relevant_tags)
+	with open(args[1], 'r') as f:
+		filepath = f.readline().rstrip()
+		tb_name = f.readline().rstrip()
+
+	tags = {
+		"filename" : filepath,
+		"tags" : relevant_tags,
+		"thumbnail" : tb_name
+	}
+	print json.dumps(tags)
 
 if __name__ == "__main__":
 	main(sys.argv)
