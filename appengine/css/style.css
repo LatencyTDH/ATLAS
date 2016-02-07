@@ -1,19 +1,4 @@
-video {
-	min-width:100%;
-	min-height:100%;
-	width:auto;
-	height:auto;
-	background-size:cover;
-	-webkit-background-size: cover;
- 	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	z-index: -100;
-  	position: fixed;
-}
 
-audio { 
-   display:none;
-}
 
 * {
   margin: 0;
@@ -30,8 +15,9 @@ body {
   font-family: "helvetica neue", helvetica, arial, sans-serif;
   font-size: 13px;
   text-align: center;
-  background: #333 url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/low_contrast_linen.png');
 }
+
+
 
 ul {
   margin: 0 auto;
@@ -165,61 +151,117 @@ a.red:hover {
   background: rgba(133, 32, 28, .7);
 }
 
-/*.signInHeader {
-	font-family: "Oleo Script", sans-serif;
-	position: absolute;
-	margin-right: -10%;
-	font-size: 60px;
-	color: #FC600E;
-	left: 16%;
-	bottom: 90%;
-	margin-top: 10%;
+audio {
+  display: none;
 }
 
-.signUpHeader {
-	
-}*/
+img {
+  width:100%;
+  height:100%;
+  margin-bottom: -25%;
+  margin-top: -25%;
+}
+
+video {
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  max-width: 100%;
+  max-height: 100%;
+  background-size:cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  o-background-size: cover;
+  z-index: -100;
+}
+
+footer {
+  background-color:black;
+  color:white;
+  clear:both;
+  text-align:center;
+  font-size: 16px;
+  padding:0px;
+}
 
 .textField {
-	margin: 5px 5px 5px 5px;
-	border-radius: 50px;
-	text-align: center;
-	width: 120%;
-	height: 20px;
-	outline: none;
+  margin: 5px 5px 5px 5px;
+  border-radius: 50px;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  outline: none;
 }
 
 .signInTF {
-	font-family: helvetica, Times;
-	font-weight: bold;
-	color: #6699f6;
+  font-family: helvetica, Times;
+  font-weight: bold;
+  color: #6699f6;
 
 }
 
 .signUpTF {
-	font-family: helvetica, Times;
-	font-weight: bold;
-	color: #BF3EFF;
+  font-family: helvetica, Times;
+  font-weight: bold;
+  color: #10DC33;
 }
 
-#line {
-	width: 50%;
-	margin-top: -3.75%;
-	border-top: 1px solid #05B82E;
+.inner {
+  position: absolute;
+  text-align: center;
+  width:80%;
 }
 
-#signIn {
-	position: absolute;
-	padding: 10% 10% 10% 10%;
-	top: 0;
-	left: 0;
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
 
-#signUp {
-	position: absolute;
-	padding: 10% 10% 10% 10%;
-	bottom: 0;
-	left: 0;
+.FormInputDiv { 
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;   
+  font-weight: 100; 
+  background: rgba(220,30,197,0.0); 
+  color: white; 
+  /*padding: 2rem;*/ 
+  width: 100%;
+  /*margin: 2rem;*/ 
+  overflow: hidden;
+  /*float: ;*/ 
+  font-size: 1.2rem; 
+}
+
+#signInDiv {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  float: left;
+  padding: 4% 10% 4% 6%;
+}
+
+#signUpDiv {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  float:right;
+  padding: 4% 6% 4% 10%;
+}
+
+#upperLeftDiv {
+  position: absolute;
+  padding: 10% 10% 10% 10%;
+  top: 0;
+  left: 0;
+}
+
+#bottomLeftDiv {
+  position: absolute;
+  padding: 10% 10% 10% 10%;
+  bottom: 0;
+  left: 0;
 }
 
 #username {
@@ -231,13 +273,9 @@ a.red:hover {
 }
 
 #firstName {
-  width: 40%;
+
 }
 
 #lastName {
-  width: 40%;
-}
-
-#buttonDIv {
 
 }
